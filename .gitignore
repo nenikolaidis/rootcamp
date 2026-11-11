@@ -1,0 +1,58 @@
+# ─────────────────────────────────────────────────────────────
+# RootCamp: what stays on your Mac and never goes to GitHub
+# (see planning/18-workflow-and-setup.md §3)
+# ─────────────────────────────────────────────────────────────
+
+# Private planning + Claude Code instructions
+CLAUDE.md
+CLAUDE.local.md
+planning/
+reference/
+.claude/
+.mcp.json
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+*serviceAccount*.json
+*.pem
+*.key
+
+# Raw captures from real Ubuntu (only cleaned fixtures in tests/fixtures/real/ are pushed)
+tools/capture-reference/raw/
+tools/capture-reference/out/
+
+# Firebase local state
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+database-debug.log*
+pubsub-debug.log*
+.runtimeconfig.json
+emulator-data/
+
+# Build output and dependencies
+node_modules/
+dist/
+dev-dist/
+coverage/
+*.tsbuildinfo
+.vite/
+
+# Test artifacts
+playwright-report/
+test-results/
+blob-report/
+.playwright-mcp/
+
+# Editors and OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.log
+npm-debug.log*
+tools/check-mac.sh
