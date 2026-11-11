@@ -70,6 +70,12 @@ export default defineConfig([
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: { ecmaVersion: 2023 },
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_', ignoreRestSiblings: true },
+      ],
+    },
   },
   {
     files: ['src/**/*.{ts,tsx}'],
