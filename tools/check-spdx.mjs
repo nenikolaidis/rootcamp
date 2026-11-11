@@ -8,6 +8,9 @@ const ROOT_FILES = ['vite.config.ts', 'eslint.config.js', 'playwright.config.ts'
 const EXTS = new Set(['.ts', '.tsx', '.js', '.mjs', '.css']);
 const SKIP_DIRS = new Set(['node_modules', 'fixtures', 'raw', 'out']);
 const HEADER = 'SPDX-License-Identifier: AGPL-3.0-or-later';
+// shadcn/ui components are copied in under their MIT licence and keep it.
+const MIT_DIR = join('src', 'ui', 'components', 'ui');
+const MIT_HEADER = 'SPDX-License-Identifier: MIT';
 
 function* walk(dir) {
   let entries;
@@ -27,10 +30,11 @@ function* walk(dir) {
 const files = [...ROOTS.flatMap((r) => [...walk(r)]), ...ROOT_FILES];
 const missing = files.filter((f) => {
   try {
+    const want = f.startsWith(MIT_DIR) ? MIT_HEADER : HEADER;
     return !readFileSync(f, 'utf8')
       .split('\n')
       .slice(0, 3)
-      .some((l) => l.includes(HEADER));
+      .some((l) => l.includes(want));
   } catch {
     return false;
   }
