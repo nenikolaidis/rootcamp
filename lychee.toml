@@ -3,7 +3,7 @@ max_concurrency = 8
 max_retries = 2
 timeout = 20
 accept = ["200..=299", "429"]
-exclude_path = ["node_modules", "dist", "planning", "reference", ".claude", "tests/fixtures"]
+exclude_path = ["node_modules", "dist", "tests/fixtures"]
 exclude = [
   '^https?://localhost',
   '^https?://127\.0\.0\.1',
