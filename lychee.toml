@@ -1,0 +1,11 @@
+# Link check for docs and learning sources (CI: lycheeverse/lychee-action).
+max_concurrency = 8
+max_retries = 2
+timeout = 20
+accept = ["200..=299", "429"]
+exclude_path = ["node_modules", "dist", "planning", "reference", ".claude", "tests/fixtures"]
+exclude = [
+  '^https?://localhost',
+  '^https?://127\.0\.0\.1',
+  '^https?://rootcamp-ac019\.(web\.app|firebaseapp\.com)',
+]
