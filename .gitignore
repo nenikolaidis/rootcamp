@@ -1,9 +1,8 @@
 # ─────────────────────────────────────────────────────────────
-# RootCamp: what stays on your Mac and never goes to GitHub
-# (see planning/18-workflow-and-setup.md §3)
+# RootCamp: files that stay local and are never committed
 # ─────────────────────────────────────────────────────────────
 
-# Private planning + Claude Code instructions
+# Local-only files
 CLAUDE.md
 CLAUDE.local.md
 planning/
