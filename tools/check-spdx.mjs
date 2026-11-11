@@ -4,7 +4,12 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
 const ROOTS = ['src', 'tests', 'tools', 'e2e'];
-const ROOT_FILES = ['vite.config.ts', 'eslint.config.js', 'playwright.config.ts'];
+const ROOT_FILES = [
+  'vite.config.ts',
+  'vitest.config.ts',
+  'eslint.config.js',
+  'playwright.config.ts',
+];
 const EXTS = new Set(['.ts', '.tsx', '.js', '.mjs', '.css']);
 const SKIP_DIRS = new Set(['node_modules', 'fixtures', 'raw', 'out']);
 const HEADER = 'SPDX-License-Identifier: AGPL-3.0-or-later';
