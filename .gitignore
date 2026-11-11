@@ -56,3 +56,7 @@ blob-report/
 *.log
 npm-debug.log*
 tools/check-mac.sh
+
+# Local code-graph tooling output
+graphify-out/
+.graphify/
