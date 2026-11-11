@@ -41,5 +41,6 @@ export default defineConfig({
   },
   server: { port: 5173, strictPort: true },
   preview: { port: 4173, strictPort: true },
-  build: { target: 'es2023', sourcemap: true },
+  // manifest: tools/check-bundle.mjs reads it to find the first-visit files.
+  build: { target: 'es2023', sourcemap: true, manifest: true },
 });

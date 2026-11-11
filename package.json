@@ -21,7 +21,8 @@
     "test:e2e": "playwright test",
     "emulators": "firebase emulators:start --project demo-rootcamp",
     "test:rules": "firebase emulators:exec --only firestore --project demo-rootcamp \"vitest run --project rules\"",
-    "check": "npm run typecheck && npm run lint && npm test && npm run test:rules"
+    "check": "npm run typecheck && npm run lint && npm test && npm run test:rules",
+    "size": "node tools/check-bundle.mjs dist"
   },
   "dependencies": {
     "class-variance-authority": "0.7.1",
