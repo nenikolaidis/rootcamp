@@ -12,7 +12,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc -b --noEmit"
+    "typecheck": "tsc -b --noEmit",
+    "lint": "eslint . && prettier --check . && node tools/check-spdx.mjs",
+    "lint:fix": "eslint . --fix && prettier --write .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "firebase": "13.3.0",

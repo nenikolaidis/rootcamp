@@ -1,0 +1,13 @@
+dist/
+dev-dist/
+coverage/
+playwright-report/
+test-results/
+package-lock.json
+tests/fixtures/
+LICENSE
+LICENSE-CONTENT
+CLAUDE.md
+planning/
+reference/
+.claude/
